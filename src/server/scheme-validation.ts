@@ -18,7 +18,7 @@ export const sendMailScheme = z
   .strict()
 
 export const sendMailHeaders = z.object({
-  apiKey: z
+  'api-key': z
     .string({
       required_error: 'Informe a chave de API do Sendgrid',
     })

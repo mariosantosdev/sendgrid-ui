@@ -30,7 +30,7 @@ router
   .use(validateHeadersSendMain())
   .use(validateSendMailScheme())
   .post(async (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
-    const apiKey = String(req.headers.apiKey)
+    const apiKey = String(req.headers['api-key'])
     const data = req.body as SendMailSchema
     sendgrid.setApiKey(apiKey)
 

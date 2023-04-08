@@ -23,5 +23,5 @@ export const sendMailHeaders = z.object({
       required_error: 'Informe a chave de API do Sendgrid',
     })
     .min(3, 'Informe a chave de API do Sendgrid')
-    .regex(/^SG\..+/gi),
+    .regex(/^SG\..+/gi, 'Chave de API inválida'),
 })
